@@ -35,7 +35,7 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
       {/* Mobile Navigation Toggle */}
       <button 
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="fixed top-6 right-6 z-50 lg:hidden bg-dark-surface p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-dark-accent"
+        className="fixed top-6 left-6 z-50 lg:hidden bg-black p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-gray-900"
       >
         {isMobileOpen ? <X className="text-white text-xl" /> : <Menu className="text-white text-xl" />}
       </button>
@@ -55,10 +55,10 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
 
       {/* Sidebar */}
       <motion.nav
-        initial={{ x: "100%" }}
-        animate={{ x: isMobileOpen || window.innerWidth >= 1024 ? 0 : "100%" }}
+        initial={{ x: "-100%" }}
+        animate={{ x: isMobileOpen || window.innerWidth >= 1024 ? 0 : "-100%" }}
         transition={{ type: "spring", damping: 25, stiffness: 120 }}
-        className="fixed right-0 top-0 h-full w-80 bg-dark-surface border-l border-dark-accent z-30"
+        className="fixed left-0 top-0 h-full w-80 bg-black border-r border-gray-800 z-30"
       >
         <div className="flex flex-col h-full p-8">
           
@@ -71,7 +71,7 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
-            <h3 className="text-xl font-semibold mb-2">Alex Rivera</h3>
+            <h3 className="text-xl font-semibold mb-2">Jose Estevez</h3>
             <p className="text-gray-400 text-sm">{t("AI Automator & Web Designer", currentLang)}</p>
           </div>
 

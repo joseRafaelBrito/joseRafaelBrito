@@ -6,11 +6,13 @@ import { ProjectsSection } from "@/components/ProjectsSection";
 import { VideosSection } from "@/components/VideosSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { Footer } from "@/components/Footer";
+import { Preloader } from "@/components/Preloader";
 import { type Language } from "@/lib/i18n";
 
 export default function Portfolio() {
   const [currentLang, setCurrentLang] = useState<Language>('en');
   const [activeSection, setActiveSection] = useState('about');
+  const [showPreloader, setShowPreloader] = useState(true);
 
   const handleNavigate = (section: string) => {
     setActiveSection(section);
@@ -44,20 +46,28 @@ export default function Portfolio() {
 
   return (
     <div className="bg-dark-primary text-white font-inter overflow-x-hidden">
-      <LanguageToggle currentLang={currentLang} onToggle={setCurrentLang} />
-      <Sidebar 
-        currentLang={currentLang} 
-        activeSection={activeSection} 
-        onNavigate={handleNavigate}
-      />
+      {showPreloader && (
+        <Preloader onComplete={() => setShowPreloader(false)} />
+      )}
       
-      <main className="lg:mr-80 min-h-screen">
-        <AboutSection currentLang={currentLang} />
-        <ProjectsSection currentLang={currentLang} />
-        <VideosSection currentLang={currentLang} />
-        <ReviewsSection currentLang={currentLang} />
-        <Footer currentLang={currentLang} />
-      </main>
+      {!showPreloader && (
+        <>
+          <LanguageToggle currentLang={currentLang} onToggle={setCurrentLang} />
+          <Sidebar 
+            currentLang={currentLang} 
+            activeSection={activeSection} 
+            onNavigate={handleNavigate}
+          />
+          
+          <main className="lg:ml-80 min-h-screen">
+            <AboutSection currentLang={currentLang} />
+            <ProjectsSection currentLang={currentLang} />
+            <VideosSection currentLang={currentLang} />
+            <ReviewsSection currentLang={currentLang} />
+            <Footer currentLang={currentLang} />
+          </main>
+        </>
+      )}
     </div>
   );
 }
