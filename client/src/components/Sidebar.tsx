@@ -39,9 +39,9 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", hoverColor: "hover:text-white" },
-    { icon: Twitter, href: "#", hoverColor: "hover:text-blue-400" },
-    { icon: Youtube, href: "#", hoverColor: "hover:text-red-500" },
+    { icon: Github, href: "https://github.com/joseRafaelBrito", hoverColor: "hover:text-white" },
+    { icon: Twitter, href: "https://x.com/estevez_brito", hoverColor: "hover:text-blue-400" },
+    { icon: Youtube, href: "https://youtube.com/@joseestevez", hoverColor: "hover:text-red-500" },
   ];
 
   const handleNavigate = (section: string) => {

@@ -74,8 +74,8 @@ export function Footer({ currentLang }: FooterProps) {
 
             <div className="flex space-x-4">
               {[
-                { icon: Github, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/joseRafaelBrito" },
+                { icon: Twitter, href: "https://x.com/estevez_brito" },
                 { icon: Linkedin, href: "#" }
               ].map((social, index) => (
                 <motion.a

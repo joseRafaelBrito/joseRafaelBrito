@@ -60,6 +60,45 @@ export const translations = {
     // Footer
     "© 2024 Alex Rivera. All rights reserved.": "© 2024 Alex Rivera. All rights reserved.",
     "Built with passion for AI automation and modern web design.": "Built with passion for AI automation and modern web design.",
+    
+    // New content
+    "Hi, I'm Jose Estevez": "Hi, I'm Jose Estevez",
+    "An AI Automation Specialist dedicated to helping restaurants and real estate agencies save time, boost engagement, and grow their businesses using smart, scalable automation.": "An AI Automation Specialist dedicated to helping restaurants and real estate agencies save time, boost engagement, and grow their businesses using smart, scalable automation.",
+    "I specialize in integrating AI-driven tools and workflow automation to eliminate repetitive tasks and free up time for what really matters — building relationships, closing deals, and delivering exceptional customer experiences.": "I specialize in integrating AI-driven tools and workflow automation to eliminate repetitive tasks and free up time for what really matters — building relationships, closing deals, and delivering exceptional customer experiences.",
+    "With a background in sales, digital systems, and content automation, I design end-to-end automated solutions that handle everything from social media posting to client follow-ups.": "With a background in sales, digital systems, and content automation, I design end-to-end automated solutions that handle everything from social media posting to client follow-ups.",
+    
+    // Skills
+    "Skills": "Skills",
+    "Sales & Communication": "Sales & Communication",
+    "Bilingual English/Spanish": "Bilingual English/Spanish",
+    "5+ years in high-performance sales environments": "5+ years in high-performance sales environments",
+    "Customer-centric and solution-driven": "Customer-centric and solution-driven",
+    "Python Programming": "Python Programming",
+    "Automation scripting": "Automation scripting",
+    "API integrations": "API integrations",
+    "Data handling and workflow logic": "Data handling and workflow logic",
+    "AI Automation": "AI Automation",
+    "AI content generation with ChatGPT API": "AI content generation with ChatGPT API",
+    "Workflow automation using n8n, Zapier, and Make": "Workflow automation using n8n, Zapier, and Make",
+    "Chatbot flows and customer service integrations": "Chatbot flows and customer service integrations",
+    "Web Development": "Web Development",
+    "Front-end: HTML, CSS, JavaScript": "Front-end: HTML, CSS, JavaScript",
+    "Back-end scripting with Python": "Back-end scripting with Python",
+    "Webhooks, APIs, and automation-ready sites": "Webhooks, APIs, and automation-ready sites",
+    
+    // Footer new content
+    "Get In Touch Footer": "Get In Touch",
+    "Services Footer": "Services",
+    "AI Automation Footer": "AI Automation",
+    "Restaurant Solutions": "Restaurant Solutions",
+    "Real Estate Tools": "Real Estate Tools",
+    "Workflow Integration": "Workflow Integration",
+    "Custom Development": "Custom Development",
+    "Connect": "Connect",
+    "Ready to automate your business? Let's discuss how AI can transform your workflow.": "Ready to automate your business? Let's discuss how AI can transform your workflow.",
+    "Schedule a Consultation": "Schedule a Consultation",
+    "© 2024 Jose Estevez. All rights reserved.": "© 2024 Jose Estevez. All rights reserved.",
+    "Empowering businesses through intelligent automation": "Empowering businesses through intelligent automation",
   },
   es: {
     // Navigation
@@ -122,6 +161,45 @@ export const translations = {
     // Footer
     "© 2024 Alex Rivera. All rights reserved.": "© 2024 Alex Rivera. Todos los derechos reservados.",
     "Built with passion for AI automation and modern web design.": "Construido con pasión por la automatización IA y el diseño web moderno.",
+    
+    // New content
+    "Hi, I'm Jose Estevez": "Hola, soy Jose Estevez",
+    "An AI Automation Specialist dedicated to helping restaurants and real estate agencies save time, boost engagement, and grow their businesses using smart, scalable automation.": "Un Especialista en Automatización de IA dedicado a ayudar a restaurantes y agencias inmobiliarias a ahorrar tiempo, aumentar el engagement y hacer crecer sus negocios usando automatización inteligente y escalable.",
+    "I specialize in integrating AI-driven tools and workflow automation to eliminate repetitive tasks and free up time for what really matters — building relationships, closing deals, and delivering exceptional customer experiences.": "Me especializo en integrar herramientas impulsadas por IA y automatización de flujos de trabajo para eliminar tareas repetitivas y liberar tiempo para lo que realmente importa: construir relaciones, cerrar negocios y ofrecer experiencias excepcionales al cliente.",
+    "With a background in sales, digital systems, and content automation, I design end-to-end automated solutions that handle everything from social media posting to client follow-ups.": "Con experiencia en ventas, sistemas digitales y automatización de contenido, diseño soluciones automatizadas de extremo a extremo que manejan todo, desde publicaciones en redes sociales hasta seguimiento de clientes.",
+    
+    // Skills
+    "Skills": "Habilidades",
+    "Sales & Communication": "Ventas y Comunicación",
+    "Bilingual English/Spanish": "Bilingüe Inglés/Español",
+    "5+ years in high-performance sales environments": "5+ años en entornos de ventas de alto rendimiento",
+    "Customer-centric and solution-driven": "Centrado en el cliente y orientado a soluciones",
+    "Python Programming": "Programación en Python",
+    "Automation scripting": "Scripts de automatización",
+    "API integrations": "Integraciones de API",
+    "Data handling and workflow logic": "Manejo de datos y lógica de flujos de trabajo",
+    "AI Automation": "Automatización IA",
+    "AI content generation with ChatGPT API": "Generación de contenido IA con API de ChatGPT",
+    "Workflow automation using n8n, Zapier, and Make": "Automatización de flujos de trabajo usando n8n, Zapier y Make",
+    "Chatbot flows and customer service integrations": "Flujos de chatbot e integraciones de servicio al cliente",
+    "Web Development": "Desarrollo Web",
+    "Front-end: HTML, CSS, JavaScript": "Front-end: HTML, CSS, JavaScript",
+    "Back-end scripting with Python": "Scripts de back-end con Python",
+    "Webhooks, APIs, and automation-ready sites": "Webhooks, APIs y sitios listos para automatización",
+    
+    // Footer new content
+    "Get In Touch Footer": "Contacto",
+    "Services Footer": "Servicios",
+    "AI Automation Footer": "Automatización IA",
+    "Restaurant Solutions": "Soluciones para Restaurantes",
+    "Real Estate Tools": "Herramientas Inmobiliarias",
+    "Workflow Integration": "Integración de Flujos de Trabajo",
+    "Custom Development": "Desarrollo Personalizado",
+    "Connect": "Conectar",
+    "Ready to automate your business? Let's discuss how AI can transform your workflow.": "¿Listo para automatizar tu negocio? Hablemos sobre cómo la IA puede transformar tu flujo de trabajo.",
+    "Schedule a Consultation": "Programar una Consulta",
+    "© 2024 Jose Estevez. All rights reserved.": "© 2024 Jose Estevez. Todos los derechos reservados.",
+    "Empowering businesses through intelligent automation": "Empoderando empresas a través de automatización inteligente",
   }
 };
 

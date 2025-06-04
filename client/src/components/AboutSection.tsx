@@ -50,7 +50,7 @@ export function AboutSection({ currentLang }: AboutSectionProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Hi, I'm Jose Estevez
+          {t("Hi, I'm Jose Estevez", currentLang)}
         </motion.h1>
         
         <motion.p 
@@ -59,7 +59,7 @@ export function AboutSection({ currentLang }: AboutSectionProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          An AI Automation Specialist dedicated to helping restaurants and real estate agencies save time, boost engagement, and grow their businesses using smart, scalable automation.
+          {t("An AI Automation Specialist dedicated to helping restaurants and real estate agencies save time, boost engagement, and grow their businesses using smart, scalable automation.", currentLang)}
         </motion.p>
         
         <motion.p 
@@ -68,7 +68,7 @@ export function AboutSection({ currentLang }: AboutSectionProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          I specialize in integrating AI-driven tools and workflow automation to eliminate repetitive tasks and free up time for what really matters — building relationships, closing deals, and delivering exceptional customer experiences.
+          {t("I specialize in integrating AI-driven tools and workflow automation to eliminate repetitive tasks and free up time for what really matters — building relationships, closing deals, and delivering exceptional customer experiences.", currentLang)}
         </motion.p>
         
         <motion.p 
@@ -77,7 +77,7 @@ export function AboutSection({ currentLang }: AboutSectionProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          With a background in sales, digital systems, and content automation, I design end-to-end automated solutions that handle everything from social media posting to client follow-ups.
+          {t("With a background in sales, digital systems, and content automation, I design end-to-end automated solutions that handle everything from social media posting to client follow-ups.", currentLang)}
         </motion.p>
         
         <motion.div 
