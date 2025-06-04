@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { Sidebar } from "@/components/Sidebar";
 import { AboutSection } from "@/components/AboutSection";
+import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { VideosSection } from "@/components/VideosSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -59,8 +60,9 @@ export default function Portfolio() {
             onNavigate={handleNavigate}
           />
           
-          <main className="lg:ml-80 min-h-screen">
+          <main className="lg:ml-64 min-h-screen">
             <AboutSection currentLang={currentLang} />
+            <SkillsSection />
             <ProjectsSection currentLang={currentLang} />
             <VideosSection currentLang={currentLang} />
             <ReviewsSection currentLang={currentLang} />

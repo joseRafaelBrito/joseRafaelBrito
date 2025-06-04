@@ -1,6 +1,6 @@
 import { User, Code, Play, Star, Github, Twitter, Youtube, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { t, type Language } from "@/lib/i18n";
 
 interface SidebarProps {
@@ -11,6 +11,25 @@ interface SidebarProps {
 
 export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const menuItems = [
     { id: "about", icon: User, label: "About Me" },
@@ -56,38 +75,41 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
       {/* Sidebar */}
       <motion.nav
         initial={{ x: "-100%" }}
-        animate={{ x: isMobileOpen || window.innerWidth >= 1024 ? 0 : "-100%" }}
+        animate={{ 
+          x: (isMobileOpen || (window.innerWidth >= 1024 && isVisible)) ? 0 : "-100%" 
+        }}
         transition={{ type: "spring", damping: 25, stiffness: 120 }}
-        className="fixed left-0 top-0 h-full w-80 bg-black border-r border-gray-800 z-30"
+        className="fixed left-0 top-0 h-full w-64 bg-slate-900 border-r border-slate-700 z-30 shadow-2xl"
+        style={{ backgroundColor: '#1e293b' }}
       >
-        <div className="flex flex-col h-full p-8">
+        <div className="flex flex-col h-full p-6">
           
           {/* Profile Section */}
-          <div className="text-center mb-12">
-            <motion.img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200" 
-              alt="Alex Rivera Profile" 
-              className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-blue-accent shadow-lg"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <h3 className="text-xl font-semibold mb-2">Jose Estevez</h3>
-            <p className="text-gray-400 text-sm">{t("AI Automator & Web Designer", currentLang)}</p>
+          <div className="text-center mb-8">
+            <motion.div
+              className="w-16 h-16 rounded-full mx-auto mb-3 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg"
+              animate={{ y: [0, -5, 0] }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <span className="text-white font-bold text-lg">JE</span>
+            </motion.div>
+            <h3 className="text-lg font-semibold mb-1 text-white">Jose Estevez</h3>
+            <p className="text-slate-400 text-xs">{t("AI Automator & Web Designer", currentLang)}</p>
           </div>
 
           {/* Navigation Menu */}
-          <ul className="space-y-6 flex-1">
+          <ul className="space-y-3 flex-1">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => handleNavigate(item.id)}
-                  className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
+                  className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group text-sm ${
                     activeSection === item.id 
-                      ? 'bg-blue-accent text-white' 
-                      : 'hover:bg-blue-accent text-gray-300 hover:text-white'
+                      ? 'bg-blue-600 text-white shadow-md' 
+                      : 'hover:bg-slate-800 text-slate-300 hover:text-white'
                   }`}
                 >
-                  <item.icon className="h-5 w-5" />
+                  <item.icon className="h-4 w-4" />
                   <span>{t(item.label as any, currentLang)}</span>
                 </button>
               </li>
@@ -95,16 +117,16 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
           </ul>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 mt-8">
+          <div className="flex justify-center space-x-4 mt-6 pt-4 border-t border-slate-700">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={index}
                 href={social.href}
-                className={`text-gray-400 transition-colors duration-300 ${social.hoverColor}`}
+                className="text-slate-400 hover:text-white transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <social.icon className="h-6 w-6" />
+                <social.icon className="h-5 w-5" />
               </motion.a>
             ))}
           </div>

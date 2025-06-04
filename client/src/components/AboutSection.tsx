@@ -45,21 +45,39 @@ export function AboutSection({ currentLang }: AboutSectionProps) {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.h1 
-          className="text-5xl lg:text-7xl font-bold mb-6"
+          className="text-4xl lg:text-6xl font-bold mb-6"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {t("Building the Future with AI", currentLang)}
+          Hi, I'm Jose Estevez
         </motion.h1>
         
         <motion.p 
-          className="text-xl lg:text-2xl text-gray-300 mb-8"
+          className="text-lg lg:text-xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          {t("I create intelligent automation solutions and stunning web experiences that transform businesses and enhance user interactions.", currentLang)}
+          An AI Automation Specialist dedicated to helping restaurants and real estate agencies save time, boost engagement, and grow their businesses using smart, scalable automation.
+        </motion.p>
+        
+        <motion.p 
+          className="text-lg lg:text-xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          I specialize in integrating AI-driven tools and workflow automation to eliminate repetitive tasks and free up time for what really matters — building relationships, closing deals, and delivering exceptional customer experiences.
+        </motion.p>
+        
+        <motion.p 
+          className="text-lg lg:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          With a background in sales, digital systems, and content automation, I design end-to-end automated solutions that handle everything from social media posting to client follow-ups.
         </motion.p>
         
         <motion.div 

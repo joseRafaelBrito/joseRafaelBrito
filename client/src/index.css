@@ -186,7 +186,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .lg\:ml-80 {
+  .lg\:ml-64 {
     margin-left: 0;
   }
 }
