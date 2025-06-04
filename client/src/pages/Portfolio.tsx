@@ -46,7 +46,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="text-white font-inter overflow-x-hidden" style={{ backgroundColor: '#1e293b' }}>
+    <div className="text-white font-inter overflow-x-hidden" style={{ backgroundColor: '#0f172a' }}>
       {showPreloader && (
         <Preloader onComplete={() => setShowPreloader(false)} />
       )}

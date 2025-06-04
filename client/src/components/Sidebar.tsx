@@ -79,15 +79,15 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
           x: (isMobileOpen || (window.innerWidth >= 1024 && isVisible)) ? 0 : "-100%" 
         }}
         transition={{ type: "spring", damping: 25, stiffness: 120 }}
-        className="fixed left-0 top-0 h-full w-64 bg-slate-900 border-r border-slate-700 z-30 shadow-2xl"
-        style={{ backgroundColor: '#1e293b' }}
+        className="fixed left-0 top-0 h-full w-64 border-r border-gray-800 z-30 shadow-2xl"
+        style={{ backgroundColor: '#1e293b', borderColor: '#374151' }}
       >
         <div className="flex flex-col h-full p-6">
           
           {/* Profile Section */}
           <div className="text-center mb-8">
             <motion.div
-              className="w-16 h-16 rounded-full mx-auto mb-3 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg"
+              className="w-16 h-16 rounded-full mx-auto mb-3 bg-gradient-to-br from-emerald-600 to-teal-700 flex items-center justify-center shadow-lg"
               animate={{ y: [0, -5, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
             >
@@ -105,8 +105,8 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
                   onClick={() => handleNavigate(item.id)}
                   className={`w-full flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group text-sm ${
                     activeSection === item.id 
-                      ? 'bg-blue-600 text-white shadow-md' 
-                      : 'hover:bg-slate-800 text-slate-300 hover:text-white'
+                      ? 'bg-emerald-600 text-white shadow-md' 
+                      : 'hover:bg-gray-700 text-gray-300 hover:text-white'
                   }`}
                 >
                   <item.icon className="h-4 w-4" />
@@ -117,12 +117,12 @@ export function Sidebar({ currentLang, activeSection, onNavigate }: SidebarProps
           </ul>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-4 mt-6 pt-4 border-t border-slate-700">
+          <div className="flex justify-center space-x-4 mt-6 pt-4 border-t border-gray-700">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={index}
                 href={social.href}
-                className="text-slate-400 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >

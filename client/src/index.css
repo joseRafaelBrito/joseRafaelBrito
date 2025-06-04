@@ -69,7 +69,7 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-    background-color: #1e293b;
+    background-color: #0f172a;
     color: white;
     overflow-x: hidden;
   }

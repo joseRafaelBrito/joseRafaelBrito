@@ -11,7 +11,7 @@ export function LanguageToggle({ currentLang, onToggle }: LanguageToggleProps) {
     <div className="fixed top-6 right-6 z-40 bg-black rounded-full p-2 shadow-lg border border-gray-800">
       <button 
         onClick={() => onToggle(currentLang === 'en' ? 'es' : 'en')}
-        className="flex items-center space-x-2 px-3 py-1 rounded-full transition-all duration-300 hover:bg-blue-accent"
+        className="flex items-center space-x-2 px-3 py-1 rounded-full transition-all duration-300 hover:bg-emerald-600"
       >
         <span className="text-sm font-medium">{currentLang.toUpperCase()}</span>
         <Globe className="h-4 w-4" />

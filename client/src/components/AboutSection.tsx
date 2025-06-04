@@ -87,8 +87,8 @@ export function AboutSection({ currentLang }: AboutSectionProps) {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.button 
-            className="bg-blue-accent hover:bg-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
-            whileHover={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.4)" }}
+            className="bg-emerald-600 hover:bg-emerald-700 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+            whileHover={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(16, 185, 129, 0.4)" }}
             whileTap={{ scale: 0.95 }}
           >
             {t("View My Work", currentLang)}
