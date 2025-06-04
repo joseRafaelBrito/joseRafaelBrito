@@ -102,10 +102,10 @@ export function Footer({ currentLang }: FooterProps) {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <p className="text-gray-400">
-            © 2024 Jose Estevez. All rights reserved.
+            {t("© 2024 Jose Estevez. All rights reserved.", currentLang)}
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            Empowering businesses through intelligent automation
+            {t("Empowering businesses through intelligent automation", currentLang)}
           </p>
         </motion.div>
       </div>
