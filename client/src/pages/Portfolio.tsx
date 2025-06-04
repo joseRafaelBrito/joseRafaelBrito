@@ -62,7 +62,7 @@ export default function Portfolio() {
           
           <main className="lg:ml-64 min-h-screen">
             <AboutSection currentLang={currentLang} />
-            <SkillsSection />
+            <SkillsSection currentLang={currentLang} />
             <ProjectsSection currentLang={currentLang} />
             <VideosSection currentLang={currentLang} />
             <ReviewsSection currentLang={currentLang} />

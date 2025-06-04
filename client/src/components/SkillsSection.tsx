@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { Code, MessageCircle, Globe, Wrench } from "lucide-react";
+import { t, type Language } from "@/lib/i18n";
 
-export function SkillsSection() {
+interface SkillsSectionProps {
+  currentLang: Language;
+}
+
+export function SkillsSection({ currentLang }: SkillsSectionProps) {
   const skills = [
     {
       icon: MessageCircle,
@@ -57,7 +62,7 @@ export function SkillsSection() {
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
             <span className="text-2xl">🛠️</span>
-            Skills
+            {t("Skills", currentLang)}
           </h2>
         </motion.div>
         
@@ -80,14 +85,14 @@ export function SkillsSection() {
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${skill.color} mr-4`}>
                   <skill.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
+                <h3 className="text-xl font-semibold text-white">{t(skill.title as any, currentLang)}</h3>
               </div>
               
               <ul className="space-y-3">
                 {skill.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start">
                     <span className="text-blue-accent mr-3 mt-1">🔹</span>
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-gray-300">{t(item as any, currentLang)}</span>
                   </li>
                 ))}
               </ul>

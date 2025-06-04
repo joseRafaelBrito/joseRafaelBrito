@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from "lucide-react";
+import { t, type Language } from "@/lib/i18n";
 
 interface FooterProps {
-  currentLang: any;
+  currentLang: Language;
 }
 
 export function Footer({ currentLang }: FooterProps) {
@@ -18,7 +19,7 @@ export function Footer({ currentLang }: FooterProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-xl font-semibold text-white mb-6">Get In Touch</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">{t("Get In Touch Footer", currentLang)}</h3>
             <div className="space-y-4">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
@@ -42,13 +43,13 @@ export function Footer({ currentLang }: FooterProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-xl font-semibold text-white mb-6">Services</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">{t("Services Footer", currentLang)}</h3>
             <ul className="space-y-3 text-gray-300">
-              <li className="hover:text-white transition-colors cursor-pointer">AI Automation</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Restaurant Solutions</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Real Estate Tools</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Workflow Integration</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Custom Development</li>
+              <li className="hover:text-white transition-colors cursor-pointer">{t("AI Automation Footer", currentLang)}</li>
+              <li className="hover:text-white transition-colors cursor-pointer">{t("Restaurant Solutions", currentLang)}</li>
+              <li className="hover:text-white transition-colors cursor-pointer">{t("Real Estate Tools", currentLang)}</li>
+              <li className="hover:text-white transition-colors cursor-pointer">{t("Workflow Integration", currentLang)}</li>
+              <li className="hover:text-white transition-colors cursor-pointer">{t("Custom Development", currentLang)}</li>
             </ul>
           </motion.div>
 
@@ -59,9 +60,9 @@ export function Footer({ currentLang }: FooterProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-xl font-semibold text-white mb-6">Connect</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">{t("Connect", currentLang)}</h3>
             <p className="text-gray-300 mb-6">
-              Ready to automate your business? Let's discuss how AI can transform your workflow.
+              {t("Ready to automate your business? Let's discuss how AI can transform your workflow.", currentLang)}
             </p>
             
             <motion.button
@@ -69,7 +70,7 @@ export function Footer({ currentLang }: FooterProps) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Schedule a Consultation
+              {t("Schedule a Consultation", currentLang)}
             </motion.button>
 
             <div className="flex space-x-4">
