@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --background: 0 0% 100%;
@@ -58,17 +58,13 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   html {
     @apply scroll-smooth;
   }
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: #0f172a;
     color: white;
     overflow-x: hidden;
@@ -79,25 +75,25 @@
   .dark-primary {
     background-color: hsl(var(--dark-primary));
   }
-  
+
   .dark-surface {
     background-color: hsl(var(--dark-surface));
   }
-  
+
   .dark-accent {
     background-color: hsl(var(--dark-accent));
   }
-  
+
   .blue-accent {
     background-color: hsl(var(--blue-accent));
   }
-  
+
   .emerald-accent {
     background-color: hsl(var(--emerald-accent));
   }
 
   .font-inter {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 }
 
@@ -143,7 +139,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
